@@ -1,0 +1,88 @@
+branches:
+  only: master
+  except: master
+  publish: True
+releases: True
+domains:
+- schema:
+    url: https://github.com/hugdru/schemas/blob/master/big_data-schema.yaml
+  data:
+    Scalability:
+      Scalable Distribution Architecture: [horizontal partitioning of database, horizontal partitioning and replication]
+      Scaling Out - Adding Data Storage Capacity: automatic data rebalancing
+      Request Load Balancing: client requests load balanced across coordinators
+      Granularity of Write Locks: no locks - conflicts allowed
+      Scalable Request Processing Architecture: fully distributed - any node acts as a coordinator
+    Consistency:
+      Object Level Atomic Updates: not supported - conflicts allowed
+      ACID Transactions: not supported
+      Distributed Transactions: not supported
+      Durable Writes: supported
+      Quorum Reads and Writes: in the client
+      Number of Replicas to Read: in the client
+      Number of Replicas to Write: in the client
+      Writes with Unavailable Replicas: hinted handoffs: writes are applied later when a replica recovers
+      Read from Master Only: not applicable - peer to peer
+      Resolving Write Conflicts: supported
+    Query Language:
+      API-based: supported
+      Declarative Query Language: not suppported
+      REST/HTTP-based Queries: supported
+      Languages Supported: [Java, Python, C/C++, PHP, Ruby, Erlang, Javascript]
+      Cursor-based Queries: not suppported
+      JOIN-style queries: not suppported
+      Complex Data Types: [maps, sets, nested structures]
+      Restrict Query Result Set Size: supported
+      Key Matching Options: exact
+      Sort Options: ascending
+      Triggers: [pre-commit, post-commit]
+      Data Object Expiry: not suppported
+    Data Model:
+      Data model: Key-Value
+      Fixed Schema: not required
+      Opaque Data Objects: not required
+      Hierarchical Data Objects: not supported
+      Automatically allocated Primary Key: supported
+      Composite Keys: not supported
+      Secondary Indexes: supported
+      Query by Key Ranges: supported
+      Query by Partial Keys: not supported
+      Query by Non-key Values: not supported
+      Map Reduce API: builtin
+      Indexed Text Search: support in a plug-in
+    Data Replication:
+      Replication Architecture: peer-to-peer
+      Replication for Backup: not supported
+      Replication across Data Centers: supported in enterprise version only (data center aware)
+      Replica Writes: [to any replica, to multiple replicas]
+      Replica Reads: [from any replica, from multiple replicas]
+      Read Repair: per query
+      Automatic Replica Failure Detection: supported
+      Automatic Failover: supported
+      Automatic New Master Election after Failure: not relevant
+      Replica Recovery and Resynchronization: supported - automatic
+    Data Distribution:
+      Data Distribution Architecture: peer-to-peer
+      Data Distribution Method: consistent hashing
+      Automatic Data Rebalancing: [new storage triggered, administrative rebalancing tools]
+      Physical Data Distribution: [single cluster, multiple data centers]
+      Query Architecture: external load balancer required
+      Queries using Non-Shard Key Value: secondary indexes
+      Merging Query Results from Multiple Shards: [sorted order, paged from server]
+    Security:
+      Client Authentication: [custom user/password, SSL]
+      Server authentication: SSL
+      Credential Store: in database
+      Role Based Security: supported
+      Security Role Options: multiple roles per user, role inheritance, custom roles
+      Scope of Roles: [database, collection]
+      Database Encryption: not supported
+      Logging: configurable event logging
+    Admin:
+      Configuration Files: needed
+      Node command line access: non-authenticated
+      Node addition/removal: [centralized tool, multiple files]
+      Cluster monitoring: snapshot
+      Dump database configuration: supported
+      Database object count: not supported
+      Physical storage usage: not supported
