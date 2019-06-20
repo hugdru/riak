@@ -18,8 +18,8 @@ domains:
       ACID Transactions: not supported
       Distributed Transactions: not supported
       Durable Writes: supported
-      Quorum Reads and Writes: in the client
-      Number of Replicas to Read: in the client
+      Quorum Reads and Writes: specified in the client
+      Number of Replicas to Read: specified in the client
       Number of Replicas to Write: specified in the client
       Writes with Unavailable Replicas: hinted handoffs - writes are applied later when a replica recovers
       Read from Master Only: not applicable - peer to peer
@@ -72,7 +72,7 @@ domains:
     Security:
       Client Authentication: [custom user/password, SSL]
       Server Authentication: [SSL]
-      Credential Store: in database
+      Credential Store: [in database]
       Role Based Security: supported
       Security Role Options: [multiple roles per user, role inheritance, custom roles]
       Scope of Roles: [database, collection]
