@@ -20,7 +20,7 @@ domains:
       Durable Writes: supported
       Quorum Reads and Writes: in the client
       Number of Replicas to Read: in the client
-      Number of Replicas to Write: in the client
+      Number of Replicas to Write: specified in the client
       Writes with Unavailable Replicas: hinted handoffs - writes are applied later when a replica recovers
       Read from Master Only: not applicable - peer to peer
       Resolving Write Conflicts: supported
@@ -36,7 +36,7 @@ domains:
       Key Matching Options: [exact]
       Sort Options: [ascending]
       Triggers: [pre-commit, post-commit]
-      Data Object Expiry: [not supported]
+      Data Object Expiry: not supported
     Data Model:
       Data Model: Key-Value
       Fixed Schema: not required
@@ -77,7 +77,7 @@ domains:
       Security Role Options: [multiple roles per user, role inheritance, custom roles]
       Scope of Roles: [database, collection]
       Database Encryption: not supported
-      Logging: configurable event logging
+      Logging: [configurable event logging]
     Admin:
       Configuration Files: multiple
       Node command line access: non-authenticated
