@@ -63,7 +63,7 @@ domains:
       Replica Recovery and Resynchronization: supported - automatic
     Data Distribution:
       Data Distribution Architecture: [peer-to-peer]
-      Data Distribution Method: consistent hashing
+      Data Distribution Method: [consistent hashing]
       Automatic Data Rebalancing: [new storage triggered, administrative rebalancing tools]
       Physical Data Distribution: [single cluster, multiple data centers]
       Query Architecture: external load balancer required
