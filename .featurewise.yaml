@@ -21,7 +21,7 @@ domains:
       Quorum Reads and Writes: in the client
       Number of Replicas to Read: in the client
       Number of Replicas to Write: in the client
-      Writes with Unavailable Replicas: hinted handoffs: writes are applied later when a replica recovers
+      Writes with Unavailable Replicas: "hinted handoffs: writes are applied later when a replica recovers"
       Read from Master Only: not applicable - peer to peer
       Resolving Write Conflicts: supported
     Query Language:
